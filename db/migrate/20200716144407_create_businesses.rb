@@ -9,6 +9,7 @@ class CreateBusinesses < ActiveRecord::Migration[6.0]
       t.string :promotions
       t.string :location
       t.integer :price_point
+      t.integer :business_owner_id
 
       t.timestamps
     end

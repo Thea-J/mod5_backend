@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 2020_07_16_144407) do
     t.string "promotions"
     t.string "location"
     t.integer "price_point"
+    t.integer "business_owner_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
