@@ -1,2 +1,0 @@
-class BusinessOwnersController < ApplicationController
-end
