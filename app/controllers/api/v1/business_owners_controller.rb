@@ -79,7 +79,32 @@ class Api::V1::BusinessOwnersController < ApplicationController
         end
     end
 
+    #Try an find a business owner with the username sent in the params hash
+    #If we can find them, authenticate the business owner with the password we've been given
+    #If it was successful, log them in, Otherwise send back an authentication error
+    def sign_in
+        business_owner = BusinessOwner.find_by(username: params[:username])
+        if business_owner && business_owner.authenticate(params[:password])
+           render json: {user: business_owner, token: generate_token({id: business_owner.id})}
+        else 
+            render json: {error: "Invalid Credentials"}, status: 400
+        end
+    end
 
+    #Decode the token that’s been sent as the authorization header & get the id of the logged in business owner
+    #Use that id to find the logged-in user 
+    #Respond with the username of that user & generate a new token from their id
+    #Otherwise send back an authentication error
+    def validate
+        id = decode_token 
+        business_owner = BusinessOwner.find_by(id: id)
+        if business_owner 
+            business_owner.password_digest = nil #Ask why this works????
+           render json: business_owner, except: [:created_at, :updated_at]
+        else 
+            render json: {error: "Cant find a business owner with that id OR decode the JWT token"}, status: 400
+        end
+    end
 
     private
     def business_owner_params

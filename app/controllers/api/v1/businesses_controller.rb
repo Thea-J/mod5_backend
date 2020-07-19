@@ -4,14 +4,18 @@ class Api::V1::BusinessesController < ApplicationController
     #All data is rendered in json format
 
     #Renders an array of all the business objects to URL:'localhost:3000/api/v1/businesses'
-    #GET request to 'localhost:3000/api/v1/businesses': Retrieves the businesses array OR errror content 
+    #GET request to 'localhost:3000/api/v1/businesses': Retrieves the businesses array OR error content 
     def index
         businesses = Business.all 
-        render json: businesses
+        business_sectors_obj = Business.sectors_obj
+        # byebug
+        business_obj = [businesses, business_sectors_obj]
+        render json: business_obj
+        # render json: businesses
     end
 
     #Use AR #find method & params to find a business object by the id that is passed in the URL
-    #GET request to 'localhost:3000/api/v1/businesses/:id': Retrieves the businesses object with that id OR errror content 
+    #GET request to 'localhost:3000/api/v1/businesses/:id': Retrieves the businesses object with that id OR error content 
     def show
         # byebug
         business = @business #DRY ???
