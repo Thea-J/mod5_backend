@@ -1,7 +1,7 @@
 class Api::V1::BusinessOwnersController < ApplicationController
     #All data is rendered in json format
     before_action :find_business_owner, only: [:show, :edit, :update, :destroy]
-
+    # skip_before_filter :verify_authenticity_token, only: [:sign_in]
 
     #Renders an array of all the business owner objects to URL:'localhost:3000/api/v1/business_owners'
     #GET request to 'localhost:3000/api/v1/business_owners': Retrieves the business owners array OR errror content 
@@ -84,8 +84,9 @@ class Api::V1::BusinessOwnersController < ApplicationController
     #If it was successful, log them in, Otherwise send back an authentication error
     def sign_in
         business_owner = BusinessOwner.find_by(username: params[:username])
+        # byebug
         if business_owner && business_owner.authenticate(params[:password])
-           render json: {user: business_owner, token: generate_token({id: business_owner.id})}
+           render json: {owner: business_owner, token: generate_token({id: business_owner.id})}
         else 
             render json: {error: "Invalid Credentials"}, status: 400
         end
@@ -98,6 +99,7 @@ class Api::V1::BusinessOwnersController < ApplicationController
     def validate
         id = decode_token 
         business_owner = BusinessOwner.find_by(id: id)
+        # byebug
         if business_owner 
             business_owner.password_digest = nil #Ask why this works????
            render json: business_owner, except: [:created_at, :updated_at]

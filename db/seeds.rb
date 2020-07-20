@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-#business owner id YOU DOROTHY start from 2
+
 BusinessOwner.all.destroy_all
-o1 = BusinessOwner.create(last_name: "The Odditty - OFUURE") 
-o2 = BusinessOwner.create(last_name: "Caroline Sande - TravelEatSlay")
-o3 = BusinessOwner.create(last_name: "Krept & Konan - Crepes & Cones")
-o4 = BusinessOwner.create(last_name: "Clamp Agency Owner") 
-o5 = BusinessOwner.create(last_name: "Fenty") 
-o6 = BusinessOwner.create(last_name: "Joycelyn Mate & Rachael Corson - Afrocenchix") 
-o7 = BusinessOwner.create(last_name: "Malaika & Nia Jones") 
-o8 = BusinessOwner.create(last_name: "Eloi - Viteloi") 
+o1 = BusinessOwner.create(last_name: "The Odditty - OFUURE", username: "odt", password: "pass1") 
+o2 = BusinessOwner.create(last_name: "Caroline Sande - TravelEatSlay", username: "tes", password: "pass2")
+o3 = BusinessOwner.create(last_name: "Krept & Konan - Crepes & Cones", username: "cac", password: "pass3")
+o4 = BusinessOwner.create(last_name: "Clamp Agency Owner", username: "cao", password: "pass4") 
+o5 = BusinessOwner.create(last_name: "Fenty", username: "fenty", password: "pass5") 
+o6 = BusinessOwner.create(last_name: "Joycelyn Mate & Rachael Corson - Afrocenchix", username: "afro", password: "pass6") 
+o7 = BusinessOwner.create(last_name: "Malaika & Nia Jones", username: "bgj", password: "pass7") 
+o8 = BusinessOwner.create(last_name: "Eloi - Viteloi", username: "vite", password: "pass8") 
 
 
 #name, bio, sector, web_link, owner_id, logo
