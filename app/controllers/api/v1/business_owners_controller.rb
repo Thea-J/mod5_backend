@@ -34,8 +34,9 @@ class Api::V1::BusinessOwnersController < ApplicationController
     #POST request to 'localhost:3000/api/v1/business_owners': Sends data from the create_business_owner form to the Rails model to create a new business owner object
     def create
         business_owner = BusinessOwner.create(business_owner_params)
+        # byebug
         if business_owner.valid?
-           render json: business_owner, except: [:created_at, :updated_at]
+           render json: {owner: business_owner, token: generate_token({id: business_owner.id})}
         else 
             render json: {error: "There was an error creating a new business owner"}, status: 400
         end

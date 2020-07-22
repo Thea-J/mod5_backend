@@ -2,7 +2,7 @@ class Business < ApplicationRecord
     belongs_to :business_owner
 
     @retail_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR0iRx2b74xgtLAithy7wdJJyQAHkYaTrhGhw&usqp=CAU"
-    @hospitality_img = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.clock-software.com%2Fimages%2Fself-service%2Fscene-3.png&imgrefurl=https%3A%2F%2Fwww.clock-software.com%2Fhotel-self-service-app.html&tbnid=rdx8Intlh08s1M&vet=12ahUKEwiw6tnRtNnqAhVY0YUKHYxgDFsQMygUegUIARDLAQ..i&docid=3qIlwEg8-klIFM&w=395&h=279&q=hotel%20check%20in%20cartoon&safe=strict&ved=2ahUKEwiw6tnRtNnqAhVY0YUKHYxgDFsQMygUegUIARDLAQ"
+    @hospitality_img = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fwelcome-hotel-cartoon-poster_1284-23535.jpg&imgrefurl=https%3A%2F%2Fwww.freepik.com%2Ffree-vector%2Fwelcome-hotel-cartoon-poster_6168923.htm&tbnid=3hwHYAvPwFET4M&vet=12ahUKEwjSq76K3t_qAhVDw-AKHYtRClgQMygIegUIARDBAQ..i&docid=MGtR3GBn18_XHM&w=626&h=455&q=hospitality%20cartoon&ved=2ahUKEwjSq76K3t_qAhVDw-AKHYtRClgQMygIegUIARDBAQ"
     @food_drinks_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQ2jUfh-jnXeqScQnDPLQreBm6v2Z5eZ9qBqA&usqp=CAU"
     @it_img = "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTyzR-tMDcfCwJQc9lfrwa9zpsEYoON4LnpBw&usqp=CAU"
     @beauty_img ="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVENQedJgrVxRlstQDhQaCJORxA_l43gTKeQ&usqp=CAU"
