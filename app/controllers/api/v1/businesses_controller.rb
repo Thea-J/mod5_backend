@@ -8,6 +8,7 @@ class Api::V1::BusinessesController < ApplicationController
     def index
         businesses = Business.all 
         business_sectors_obj = Business.sectors_obj
+
         # byebug
         business_obj = [businesses, business_sectors_obj]
         render json: business_obj
