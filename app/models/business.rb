@@ -11,6 +11,6 @@ class Business < ApplicationRecord
     @artist_img = "https://i.pinimg.com/originals/7a/7d/43/7a7d43f98c60f34e4e38f38c9a7f41df.jpg"
 
     def self.sectors_obj
-    business_sectors = [{"Retail": @retail_img}, {"Hospitality": @hospitality_img}, {"Food & Beverage": @food_drinks_img}, {"I.T.": @it_img}, {"Beauty": @beauty_img}, {"Hair": @hair_care_img}, {"Wellness": @wellness_img}, {"Art": @artist_img}]
+    business_sectors = [{sector:"Retail", imgUrl: @retail_img}, {sector: "Hospitality", imgUrl: @hospitality_img}, {sector: "Food & Beverage", imgUrl: @food_drinks_img}, {sector: "I.T.", imgUrl: @it_img}, {sector: "Beauty", imgUrl: @beauty_img}, {sector: "Hair", imgUrl: @hair_care_img}, {sector: "Wellness", imgUrl: @wellness_img}, {sector: "Art", imgUrl: @artist_img}]
     end
 end
