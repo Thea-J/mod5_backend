@@ -32,3 +32,12 @@ b8 = Business.create(name: "Brown Girl Jane", bio: "Plant-Based Wellness & Beaut
 b9 = Business.create(name: "Viteloi", bio: "Illustrador", sector:"Art", social_media:"", promotions:"", country:"UK", city:"Bristol", price_point:"2", web_link:"https://www.pinterest.co.uk/lizblanford/viteloi/", business_owner_id: 8, logo:"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRayGuYFnJHDaeimQzCVhn-7c7rGLQ2aIq9dA&usqp=CAU")
 
 
+# Edit this later
+b10 = Business.create(name: "Loudbrand Studios", sector:"Retail", country:"UK", city:"London", price_point:"1", business_owner_id: 2, logo:"https://cdn.shopify.com/s/files/1/0258/8341/0506/files/website_logo.001_300x300.jpeg?v=1587929755")
+b11 = Business.create(name: "Auvere", sector:"Retail", country:"UK", city:"Bristol", price_point:"2", business_owner_id: 3, logo:"https://i.pinimg.com/280x280_RS/b5/34/0d/b5340daeb066a6deaaca57c8c44a6dd8.jpg")
+b12 = Business.create(name: "AAKS", sector:"Retail", country:"UK", city:"Leicester", price_point:"3", business_owner_id: 4, logo:"https://afrikafashionleague.com/wp-content/uploads/2017/02/oxosi_aaks_logo_white_on_black-thumbnail-1000x1000-70.jpg")
+b13 = Business.create(name: "Nubian Skin", sector:"Retail", country:"UK", city:"Birmingham", price_point:"4", business_owner_id: 6, logo:"https://images.squarespace-cdn.com/content/5a84fa018dd041c9c07b3ebf/1520852501828-VRRV47HY6813JA42PBYE/Skinimin-Directory-NubianSkin-thumbnail.jpg?content-type=image%2Fjpeg")
+
+b14 = Business.create(name: "Plant Apothecary Beauty", sector:"Beauty", country:"UK", city:"London", price_point:"1", business_owner_id: 2, logo:"https://cdn.shopify.com/s/files/1/0011/0752/5691/files/PLANT_logo_with_Apothecary_250x.jpg?v=1571181879")
+b15 = Business.create(name: "Essentials by Temi", sector:"Beauty", country:"UK", city:"Birmingham", price_point:"2", business_owner_id: 3, logo:"https://images.squarespace-cdn.com/content/5c11e0fb5cfd7992ba01ee7a/1574308935272-OD8SRIJ9V5KJ88ZFA43Q/Updated-Logo.jpg?content-type=image%2Fjpeg")
+b16 = Business.create(name: "Beauty Bakerie", sector:"Beauty", country:"UK", city:"Bristol", price_point:"3", business_owner_id: 4, logo:"https://www.qvcuk.com/content/dam/qvc_uk/brands/beauty/180111_beauty_bakerie_logo.jpg")
